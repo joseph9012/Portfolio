@@ -1,100 +1,234 @@
+<!-- START OF UPDATED HTML -->
 <!DOCTYPE html>
-<html>
-
-<!-- Head section where we define page metadata and reference CSS style -->
+<html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>UX/UI Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
     
-    <!-- Page title displayed in browser titlebar and search engines -->
-    <title>UX/UI Portfolio | Joseph Hordern</title>
-
-    <!-- Below makes our page mobile-friendly -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Section for CSS -->
-    <!-- Reference to Bootstrap stylesheet -->
-<link rel="stylesheet" href="css/bootstrap.css">
-    
-    <!-- Reference to our stylesheet -->
-    <link rel="stylesheet" href="css/styles.css">
-    
-    <!-- Reference to Google Fonts stylesheet -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
 </head>
+<body class="home-page">
+  <div class="fixed-name">
+    <span class="vertical-name joseph">Joseph</span>
+    <span class="vertical-name">Hordern</span>
+  </div>
 
-<!-- Body section where we add content -->
-<body>
+  <div class="hero">
+    <div class="navbar-container">
+      <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="work.html">Work</a>
+        <a href="about.html">About</a>
+      </div>
+    </div>
 
-    <header>
-        <div class="row justify-content-center">
-        <img class="photo" src="images/Joseph.PNG"
-             width="75" height="75">
+    <div class="content-wrapper">
+      <div class="hero-content">
+        <div class="carousel" id="carousel">
+          <div class="carousel-track" id="carouselTrack">
+            <!-- Blank Box 1 -->
+            <div class="carousel-item hover-effect">
+                  <a href="Blank.html">
+              <div class="placeholder-box">
+                <img src="Images/Empty_vid.gif" alt="Empty Hover" class="hover-gif" />
+              </div>
+                </a>
+            </div>
+
+            <!-- Blank Box 2 -->
+            <div class="carousel-item hover-effect">
+                  <a href="Blank.html">
+              <div class="placeholder-box">
+                <img src="Images/Empty_vid.gif" alt="Empty Hover" class="hover-gif" />
+              </div>
+                </a>
+            </div>
+
+            <!-- Miles Project -->
+            <div class="carousel-item hover-effect">
+              <a href="Miles.html">
+                <div class="media-wrapper">
+                  <img src="Images/Miles.png" alt="Miles" class="project-img" />
+                  <img src="Images/Miles_vid2.gif" alt="Miles GIF" class="hover-gif" />
+                </div>
+              </a>
+            </div>
+
+            <!-- Sainsbury’s Project -->
+            <div class="carousel-item hover-effect">
+              <a href="Sainsburys.html">
+                <div class="media-wrapper">
+                  <img src="Images/Sainsburys.png" alt="Sainsbury’s" class="project-img" />
+                  <img src="Images/Sainsburys_vid.gif" alt="Sainsbury’s GIF" class="hover-gif" />
+                </div>
+              </a>
+            </div>
+
+            <!-- DLE Project -->
+            <div class="carousel-item hover-effect" id="dleItem">
+              <a href="DLE.html">
+                <div class="media-wrapper">
+                  <img src="Images/DLE.png" alt="DLE" class="project-img" />
+                  <img src="Images/DLE_vid.gif" alt="DLE GIF" class="hover-gif" />
+                </div>
+              </a>
+            </div>
+
+
+              
+            <!-- Dashboard Project -->
+            <div class="carousel-item hover-effect">
+              <a href="Dashboard.html">
+                <div class="media-wrapper">
+                  <img src="Images/Dashboard.png" alt="Dashboard" class="project-img" />
+                  <img src="Images/Dashboard_vid.gif" alt="Dashboard GIF" class="hover-gif" />
+                </div>
+              </a>
+            </div>
+              
+              
+          </div>
         </div>
-        
-        <h1>Joseph Hordern</h1>
-        
-        <h2>Aspiring UX and UI Designer from the UK</h2>
-        
-        
-    </header>
-    
-        <div class="projects">
-            <h3>My portfolio</h3>
-          
-            <div class="row justify-content-center">
-            
-                <div class="project col-10 col-md-3" style="background-image: url(images/project-design-improvements.png)">
-                <a href="project.html">
-                <H4>TFL journy planner design improvements</H4>
-                    </a>
-                </div>
-                
-                 <div class="project col-10 col-md-3" style="background-image: url(images/project-design-improvements.png)">
-                <a href="project.html">
-                <H4>TFL journy planner design improvements</H4>
-                    </a>
-                </div>
-                
-                 <div class="project col-10 col-md-3" style="background-image: url(images/project-design-improvements.png)">
-                <a href="project.html">
-                <H4>TFL journy planner design improvements</H4>
-                    </a>
-                </div>
-                
-            
-            </div> <!--_close row--->
-                
+      </div>
+         
+
+      <footer id="contact">
+        <a href="mailto:josephh12@hotmail.co.uk" class="contact-link">contact me</a>
+      </footer>
     </div>
-    <div class="about">
-        <h3> About me</h3>
-         <div class="row justify-content-center">
-        <p class="col 10 col-md-4">
-        
-        I studdied at NTU . . .before taking a course at
-            <a
-            class="light" href="https://schoolofux.com">  The School of UX</a>           
-           </p>
-        </div>
-    </div>
-    <footer>
-    <H3>Get in touch</H3>
-        
-        <a class="btn-primary col 10" href="tell:07495358282">
-        
-            Call me
-        </a> 
-        
-        <a class="btn-primary col 10" target="_blank"  href="mailto:josephhh12@hotmail.co.uk">
-            Email me
-        </a>   
-        
-        <a class="btn-primary col 10" href="portfolio.pdf" target="_blank">
-           Download portfolio
-        
-        </a>
-        
-    </footer>
+  </div>
     
+
+<div class="scroll-hint">
+  <img src="Images/Scroll_animation.gif" alt="Scroll animation" class="scroll-gif">
+  <span class="scroll-text">scroll for more</span>
+</div>
+
+  
+<div id="other-carousel" class="other-carousel hidden">
+    <div class="other-carousel-heading">A small selection of my other work</div>
+  <div class="other-carousel-grid">
+    <div class="image-wrapper">
+      <img src="Images/Other1.png" alt="Other Image 1" />
+      <div class="overlay"><span>Logo ideation</span></div>
+    </div>
+    <div class="image-wrapper">
+      <img src="Images/Other2.png" alt="Other Image 2" />
+      <div class="overlay"><span>Logo ideation</span></div>
+    </div>
+    <div class="image-wrapper">
+      <img src="Images/Other3.png" alt="Other Image 3" />
+      <div class="overlay"><span>Logo ideation</span></div>
+    </div>
+    <div class="image-wrapper">
+      <img src="Images/Other4.png" alt="Other Image 4" />
+      <div class="overlay"><span>Logo ideation</span></div>
+    </div>
+    <div class="image-wrapper">
+      <img src="Images/Other8.png" alt="Other Image 5" />
+      <div class="overlay"><span>Behance creative challange</span></div>
+    </div>
+    <div class="image-wrapper">
+      <img src="Images/Other6.png" alt="Other Image 6" />
+      <div class="overlay"><span>Logo ideation</span></div>
+    </div>
+    <div class="image-wrapper">
+      <img src="Images/Other7.png" alt="Other Image 7" />
+      <div class="overlay"><span>Behance creative challange</span></div>
+    </div>
+    <div class="image-wrapper">
+      <img src="Images/Other5.png" alt="Other Image 8" />
+      <div class="overlay"><span>Womans gym logo</span></div>
+    </div>
+    <div class="image-wrapper">
+      <img src="Images/Other9.png" alt="Other Image 9" />
+      <div class="overlay"><span>Packaging design</span></div>
+    </div>
+    <div class="image-wrapper">
+      <img src="Images/Other13.png" alt="Other Image 10" />
+      <div class="overlay"><span>A project looking at phones of the future</span></div>
+    </div>
+    <div class="image-wrapper">
+      <img src="Images/Other11.png" alt="Other Image 11" />
+      <div class="overlay"><span>A project looking at phones of the future</span></div>
+    </div>
+    <div class="image-wrapper">
+      <img src="Images/Other12.png" alt="Other Image 12" />
+      <div class="overlay"><span>A project looking at phones of the future</span></div>
+    </div>
+    <div class="image-wrapper">
+      <img src="Images/Other10.png" alt="Other Image 13" />
+      <div class="overlay"><span>Cable organiser render</span></div>
+    </div>
+    <div class="image-wrapper">
+      <img src="Images/Other17.png" alt="Other Image 14" />
+      <div class="overlay"><span>Army kit redesign</span></div>
+    </div>
+    <div class="image-wrapper">
+      <img src="Images/Other15.png" alt="Other Image 15" />
+      <div class="overlay"><span>A level photography final peice</span></div>
+    </div>
+    <div class="image-wrapper">
+      <img src="Images/Other16.png" alt="Other Image 16" />
+      <div class="overlay"><span>Photography</span></div>
+    </div>
+    <div class="image-wrapper">
+      <img src="Images/Other18.png" alt="Other Image 17" />
+      <div class="overlay"><span>Photography</span></div>
+    </div>
+    <div class="image-wrapper">
+      <img src="Images/Other14.png" alt="Other Image 18" />
+      <div class="overlay"><span>Leather walet I designed and made</span></div>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="image-lightbox" id="lightbox">
+      <div class="lightbox-content">
+  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" alt="Enlarged view" id="lightbox-img">
+  <div class="close-btn" id="close-btn"></div>
+    </div>
+    </div>
+
+
+    
+
+
+<!-- Sidebar container where sidebar.html will be injected -->
+<div id="sidebar-container"></div>
+<div id="hamburger"></div>
+<!-- Load sidebar.html and then initialize sidebar interaction -->
+<script>
+  fetch('sidebar.html')
+    .then(res => res.text())
+    .then(html => {
+      document.getElementById('sidebar-container').innerHTML = html;
+
+      const isHomepage = window.location.pathname.endsWith('index.html') || window.location.pathname === '/';
+
+      // Hide the .sidebar.home block on the homepage only
+      const homeSidebar = document.getElementById('sidebar-home');
+      if (homeSidebar && isHomepage) {
+        homeSidebar.style.display = 'none';
+      }
+
+      // Initialize sidebar functionality after loading
+      initSidebar();
+    });
+</script>
+
+
+<script src="./script.js"></script>
+
+
+    
+    <div style="height: 3500px; visibility: hidden;"></div>
 </body>
 </html>
+<!-- END OF UPDATED HTML -->
