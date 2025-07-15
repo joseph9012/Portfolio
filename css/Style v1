@@ -1,0 +1,826 @@
+:root {
+  --primary: #34568B;
+  --secondary: #F06C00;
+  --light: #f9f9f9;
+}
+
+
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: var(--light);
+  color: #F0ECE4;
+  overflow-x: hidden;
+  height: calc(300vh + 3000px);
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overscroll-behavior-y: contain; /* disables overscroll bounce vertically */
+  overflow-x: hidden;
+}
+
+body {
+  overflow-y: scroll; /* keeps scrollbar always visible */
+}
+
+
+
+.carousel-item p {
+  color: white; /* Main blue colour */
+  font-weight: bold;
+}
+
+header {
+  position: relative;
+  background-color: var(--light);
+  padding: 2rem 1rem 6rem;
+  text-align: center;
+  z-index: 1100; /* So navbar sits above other content */
+}
+
+
+.navbar {
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.navbar a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: var(--primary);
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  color: var(--secondary);
+}
+
+/* Added styles for fixed navbar container from hero */
+.navbar-container {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  width: 300px;
+  transform: translateX(-50%);
+  z-index: 1000;
+  background: none;
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0;
+}
+
+.content-wrapper {
+  margin-left: -350px;
+}
+
+.hero {
+  background-image: url('Images/Main.png');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  padding: 0 5%;
+  position: relative;
+}
+
+.carousel {
+  overflow: visible;
+  white-space: nowrap;
+  width: 100%;
+  height: 450px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 2rem;
+  will-change: transform;
+  transition: transform 0.1s ease-out;
+  transform: translateX(500px);
+  align-items: center;
+}
+
+.carousel-item {
+  flex: 0 0 auto;
+  text-align: center;
+  position: relative;
+}
+
+.carousel-item img {
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  display: block;
+  margin: 0 auto;
+  border-radius: 4px;
+  will-change: transform;
+}
+
+.carousel-item img:hover {
+  transform: scale(1.05);
+}
+
+.placeholder-box {
+  background-color: white;
+  margin: 0 auto;
+  display: block;
+  border-radius: 4px;
+  will-change: transform;
+  position: relative;
+}
+
+.fixed-name {
+  position: fixed;
+  top: 50px;
+  left: 5%; /* Match the carousel's padding */
+  height: 400px;
+  z-index: 2000;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 10px;
+  pointer-events: none;
+  transition: all 0.1s ease-out;
+  opacity: 1;
+  will-change: transform;
+}
+
+.fixed-name.hidden {
+  opacity: 0;
+}
+
+.vertical-name {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-size: 2.7rem;
+  color: #F0ECE4;
+  font-weight: bold;
+  line-height: 1.1;
+}
+
+.joseph {
+  margin-top: 75px;
+}
+
+#contact {
+  position: fixed;
+  bottom: 10px;
+  right: 1rem;
+  z-index: 1100;
+}
+
+.contact-link {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+
+.carousel-item.hover-effect .hover-gif {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: calc(100% + 20px);
+  height: calc(100% + 20px);
+  object-fit: cover;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease-in-out;
+  border-radius: 4px;
+  z-index: 2;
+}
+
+.carousel-item.hover-effect:hover .hover-gif {
+  opacity: 1;
+}
+
+.carousel-item .media-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.project-img {
+  display: block;
+  border-radius: 4px;
+}
+
+.about {
+  max-width: 600px;
+  margin: 5rem auto 0;
+  text-align: left;
+}
+
+.about h1 {
+  font-size: 2.5rem;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.about p {
+  color: white;
+  line-height: 1.6;
+}
+
+.contact-button {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.75rem 1.5rem;
+  background-color: white;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+section {
+  padding: 4rem 2rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+section h2 {
+  color: var(--primary);
+  border-bottom: 2px solid var(--secondary);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.placeholder {
+  background: #e0e0e0;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 8px;
+  color: #666;
+}
+
+footer {
+  background-color: transparent;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 4rem;
+}
+
+
+.other-carousel {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  max-height: 0;
+  overflow-y: hidden;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: 
+    max-height 0.5s ease,
+    opacity 0.5s ease,
+    transform 0.5s ease;
+  background-color: var(--light);
+  padding: 0 2rem;
+  pointer-events: none;
+  z-index: 5000;
+  box-shadow: none;
+}
+
+.other-carousel.visible {
+  max-height: 93vh; /* allow most of screen */
+  overflow-y: auto;
+  opacity: 1;
+  transform: translateY(0);
+  padding: 2rem;
+  pointer-events: auto;
+}
+
+
+
+
+/* Remove the .hidden class or make it only control pointer-events & visibility */
+/* But better to just toggle .visible and let base state be hidden */
+
+
+.other-carousel-heading {
+    font-size: 36pt;
+    font-weight: normal;
+    margin-bottom: 2.5rem;
+    color: #34568B;
+    transition: padding-left 0.3s ease;
+}
+
+
+.other-carousel.visible .other-carousel-heading {
+  opacity: 1;
+}
+
+
+.other-carousel-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  padding-left: 15px;
+  padding-right: 15px;
+  box-sizing: border-box;
+  align-items: center; /* optional for vertical centering */
+}
+
+.other-carousel-grid img {
+  max-width: calc((100vw - 40px - (4 * 16px)) / 4); /* 4 images per row example */
+  width: 100%;  /* ensures scaling down on smaller screens */
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+/* Responsive: On small screens, fewer images per row */
+@media (max-width: 900px) {
+  .other-carousel-grid img {
+    max-width: calc((100vw - 40px - (1 * 16px)) / 2); /* 2 images per row */
+  }
+}
+@media (max-width: 600px) {
+  .other-carousel-grid img {
+    max-width: calc(100vw - 40px); /* 1 image per row */
+  }
+}
+
+@media (max-width: 600px) {
+  .other-carousel-heading {
+    padding-left: 5vw; /* Match the mobile grid padding */
+  }
+  
+  .other-carousel-inner {
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+}
+
+
+.other-carousel-grid img:hover {
+  transform: scale(1.05);
+}
+
+
+.image-wrapper {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+
+/* Existing hover scale */
+.image-wrapper:hover img {
+  transform: scale(1.05);
+  filter: brightness(50%);
+}
+
+/* Overlay styling */
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white; /* your default blue */
+  font-weight: bold;
+  font-size: 1.2rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  white-space: nowrap;
+  user-select: none;
+}
+
+/* Show overlay on hover */
+.image-wrapper:hover .overlay {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+
+/* Overlay background */
+.image-lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s ease;
+}
+
+/* Enlarged image */
+.image-lightbox img {
+  max-width: 75vw;
+  max-height: 75vh;
+  object-fit: contain;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+/* Show the lightbox */
+.image-lightbox.active {
+  opacity: 1;
+  pointer-events: auto;
+   backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.2); /* Optional: soft white tint */
+}
+
+/* Prevent scrolling when lightbox is open */
+body.no-scroll {
+  position: fixed;
+  overflow: hidden;
+  width: 100%;
+}
+
+/* Close button: small black X only */
+.image-lightbox .close-btn {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 16px;     /* bigger for better click area */
+  height: 16px;
+  cursor: pointer;
+  color: black;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1;
+  user-select: none;
+  z-index: 10000;
+}
+
+/* Create the X lines */
+.image-lightbox .close-btn::before {
+  content: "×"; /* Unicode multiplication sign looks nicer than 'X' */
+  display: block;
+  color: black;
+  opacity: 0.8;
+  font-size: 16px;
+  line-height: 1;
+}
+.image-lightbox .close-btn::after {
+  content: "";
+  position: absolute;
+  left: 3px;
+  top: 0;
+  width: 2px;
+  height: 8px;
+  background-color: black;
+}
+
+.image-lightbox .close-btn::before {
+  transform: rotate(45deg);
+}
+
+.image-lightbox .close-btn::after {
+  transform: rotate(-45deg)
+}
+.lightbox-content {
+  position: relative;
+  display: inline-block; /* shrinkwrap the image */
+}
+
+
+
+
+
+/*SIDEBAR*/
+
+/* Hamburger button */
+
+/* Sidebar styles */
+/* Base sidebar */
+.sidebar {
+  position: fixed;
+  top: 25%; /* This will be overridden for other sidebars */
+  right: -250px; /* Hidden by default */
+  width: 200px;
+  height: 40vh;
+  background-color: rgba(240, 236, 228, 0.99);
+  padding-top: 10px;
+  padding-right: 10px;
+  margin: 0; /* Reset margin so gap is only from spacing logic */
+  border-radius: 30px;
+  text-align: right;
+  transition: right 0.3s ease;
+  z-index: 9000;
+}
+
+.sidebar a {
+  display: block;
+  padding: 15px 25px; /* You specified 15px padding – already matches */
+  color: #34568B;
+  text-decoration: none;
+  font-size: 18px;
+  transition: background 0.2s;
+}
+
+.sidebar a:hover {
+  color: var(--secondary); /* Ensure it's defined */
+}
+
+/* When active, slide into view */
+.sidebar.active {
+  right: 0;
+}
+
+/* --- Specific Sidebars --- */
+
+/* Main sidebar: starts 10px below hamburger (assumed to be at ~5% from top) */
+#sidebar {
+  top: calc(5% + 70px); /* Adjust as needed for hamburger placement */
+  z-index: 9100;
+    
+}
+
+/* Second sidebar (Work/About): 10px gap below first */
+.sidebar.work-about {
+  top: calc(5% + 55px + 40vh + 30px);
+  z-index: 9110;
+    height: 15vh;
+    background-color: rgba(52,134,139, 0.99);
+}
+
+/* Third sidebar (Contact/LinkedIn): another 10px gap below second */
+.sidebar.contact-linkedin {
+  top: calc(5% + 10px + 40vh + 60px + 15vh + 30px);
+  z-index: 9120;
+     height: 15vh;
+    background-color: rgba(255,111,97, 0.99);
+    
+}
+
+.sidebar.work-about a {
+  color: rgb(240, 236, 228); /* Example: white text */
+}
+
+.sidebar.work-about a:hover {
+  color: var(--primary); 
+}
+
+/* Contact/LinkedIn sidebar link styles */
+.sidebar.contact-linkedin a {
+  color: rgb(240, 236, 228); /* Example: white text */
+}
+
+.sidebar.contact-linkedin a:hover {
+  color: var(--primary); 
+    
+    
+}
+    .sidebar.home {
+  top: calc(7%); /* Appears at the top */
+  z-index: 9130;
+  height: 5vh;
+align-items: center; 
+  background-color: #34568B;
+    
+}
+.sidebar.home a {
+  color: #F0ECE4;
+  padding-top: 5px;    /* Moves the text up */
+  padding-bottom: 5px; /* Keeps total padding consistent */
+  padding-left: 25px;
+  padding-right: 25px;
+}
+.sidebar.home a:hover {
+  color: var(--secondary);
+}
+
+/* Only affects sidebar positioning on the homepage */
+body.home-page #sidebar {
+  top: calc(5% + 25px - 13px); /* Move up by 20px */
+}
+
+body.home-page .sidebar.work-about {
+  top: calc(5% + 10px + 40vh + 30px - 13px);
+}
+
+body.home-page .sidebar.contact-linkedin {
+  top: calc(5% + 10px + 40vh + 15px + 15vh + 30px - 13px);
+}
+
+
+/* Hamburger button styles */
+/* Hamburger button styles */
+.burger {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  height: 3em;
+  width: 3em;
+  cursor: pointer;
+  font-size: 11px;
+  z-index: 9000;
+  opacity: 1 !important;
+  filter: none !important;
+  -webkit-tap-highlight-color: transparent;
+  transition: 0.2s all;
+}
+
+.burger .burger-lines,
+.burger .burger-lines:before,
+.burger .burger-lines:after {
+  content: '';
+  position: absolute;
+  height: 0.25em;
+  background-color: var(--primary);
+  border-radius: 0.25em;
+  pointer-events: none;
+  transition: 0.2s ease;
+}
+
+/* Middle line */
+.burger .burger-lines {
+  width: 3em;
+  top: 50%;
+  left: 0;
+  margin-top: -0.125em; /* center vertically */
+}
+
+/* Top line */
+.burger .burger-lines:before {
+  width: 2em;
+  top: -1em;      /* 1em above middle line */
+  left: 1em;      /* shifted right */
+}
+
+/* Bottom line */
+.burger .burger-lines:after {
+  width: 2em;
+  top: 1em;       /* 1em below middle line */
+  left: 0;        /* aligned left */
+}
+
+/* Hamburger squeeze animation */
+.burger.burger-squeeze .burger-lines,
+.burger.burger-squeeze .burger-lines:before,
+.burger.burger-squeeze .burger-lines:after {
+  transition:
+    0.2s top 0.2s,
+    0.1s left,
+    0.2s transform,
+    0.4s background-color 0.2s;
+}
+
+/* When open, hide middle line */
+.burger.burger-squeeze.open .burger-lines {
+  background-color: transparent;
+}
+
+/* When open, move top and bottom lines to center and full width */
+.burger.burger-squeeze.open .burger-lines:before,
+.burger.burger-squeeze.open .burger-lines:after {
+  width: 3em;      /* full width */
+  top: 50%;       /* center vertically */
+  left: 0;        /* align left */
+  margin-top: -0.125em;
+}
+
+/* Rotate lines to form cross */
+.burger.burger-squeeze.open .burger-lines:before {
+  transform: rotate(-45deg);
+}
+
+.burger.burger-squeeze.open .burger-lines:after {
+  transform: rotate(45deg);
+}
+
+
+.scroll-hint {
+  position: fixed;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  z-index: 1050; /* above footers/carousels but below hamburger/sidebar */
+  padding: 0.3em 0.8em;
+  border-radius: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.scroll-gif {
+  height: 28px; /* adjust as needed */
+  margin-right: 8px;
+}
+
+.scroll-text {
+  color: #34568B; /* your default blue */
+  font-weight: bold;
+  font-size: 1.1em;
+  letter-spacing: 0.03em;
+}
+
+
+ /*removes I-beam pointer issue */
+
+.image-wrapper,
+.image-wrapper * {
+  cursor: pointer !important;
+  user-select: none !important;
+}
+
+
+
+
+
+/*MILES AND MORE*/
+   .image-container-title {
+  padding-left: 250px;
+  padding-right: 250px;
+  margin-top: -60px;
+  min-width: 400px; /* Ensures enough space for the title */
+}
+.image-container-userflow {
+  padding-left: 60px;
+  padding-right: 60px;
+  margin-top: -15px;
+}
+.responsive-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.custom-image-container {
+  position: relative;
+  width: 100%;
+  height: 700px; /* Adjust overall container height as needed */
+  min-width: 350px;
+}
+
+/* Base class for all manually placed images */
+.manual-image {
+  position: absolute;
+  display: block;
+}
+
+/* Individual control for each image */
+.wireframe2 {
+  top: -540px;      /* Distance from top of container */
+  left: 40px;      /* Distance from left of container */
+  width: 540px;    /* Adjust the width as needed */
+  height: auto;    /* Keep aspect ratio */
+}
+
+.wireframe-highres2 {
+  top: -75px;      /* Distance from top of container */
+  left: 300px;     /* Distance from left of container */
+  width: 1180px;    /* Adjust the width as needed */
+  height: auto;    /* Keep aspect ratio */
+}
+
+
+/* Responsive: stack images and make them fill the container on small screens */
+@media (max-width: 1400px) {
+  .custom-image-container {
+    height: auto;
+    min-width: 0;
+  }
+  .manual-image {
+    position: static;
+    width: 90%;
+    max-width: 650px;
+    margin: 20px auto;
+    display: block;
+  }
+}
+
+
+
+/*arrow right*/
+.right-arrow {
+  width: 30px;
+  height: 5px;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-left: 25px solid #34568B; /* Arrow color and length */
+  margin: 30px auto 0 auto; /* center horizontally, add space above */
+}
